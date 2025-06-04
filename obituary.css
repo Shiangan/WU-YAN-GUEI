@@ -1,6 +1,7 @@
 @font-face {
-    font-family: 'ChenYu';
-    src: url('辰魚落雁體.ttf') format('truetype'); /* 使用 truetype 格式 */
+  font-family: 'ChenYu';
+  src: url('chenyu.ttf') format('truetype');
+  font-display: swap; /* 或 optional / block */
 }
 
 body {
