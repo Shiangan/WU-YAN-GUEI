@@ -429,6 +429,44 @@ document.addEventListener("DOMContentLoaded", () => {
 }
     </style>
 
+        <script>
+          // 點擊圖片放大功能
+    const cardImg = document.querySelector(".flower-basket-item");
+    if (cardImg) {
+        cardImg.addEventListener("click", function () {
+            const modal = document.createElement("div");
+            modal.style.position = "fixed";
+            modal.style.top = "0";
+            modal.style.left = "0";
+            modal.style.width = "100vw";
+            modal.style.height = "100vh";
+            modal.style.backgroundColor = "rgba(0, 0, 0, 0.8)";
+            modal.style.display = "flex";
+            modal.style.alignItems = "center";
+            modal.style.justifyContent = "center";
+            modal.style.zIndex = "1000";
+
+            const img = document.createElement("img");
+            img.src = cardImg.src;
+            img.alt = cardImg.alt;
+            img.style.maxWidth = "90%";
+            img.style.maxHeight = "90%";
+            img.style.borderRadius = "10px";
+            img.style.boxShadow = "0 4px 8px rgba(0, 0, 0, 0.5)";
+
+            modal.appendChild(img);
+            document.body.appendChild(modal);
+
+            // 點擊模態框關閉
+            modal.addEventListener("click", function () {
+                document.body.removeChild(modal);
+            });
+        });
+    }
+});
+
+</script>
+
 <!-- 固定聯絡方式 -->
         <div id="fixed-links">
             <a href="tel:0938-179-858" class="bold">
