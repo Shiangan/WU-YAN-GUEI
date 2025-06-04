@@ -20,9 +20,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js" defer></script>
- <!-- 在<head>中引入 Lightbox2（假設使用 Lightbox2） -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
 </head>
 
 
@@ -320,12 +317,17 @@ document.addEventListener("DOMContentLoaded", () => {
     <!-- 訂購按鈕 -->
     <a href="https://line.me/ti/p/TuM5y_Of6I" target="_blank" class="btn-order"><strong>加入 LINE 訂購</strong></a><br>
 
-    <div>
+    <!-- 顯示花籃樣式按鈕 -->
+    <a href="javascript:void(0);" id="show-flower-baskets" class="btn"><strong>顯示花籃樣式 🌹</strong></a>
+</section>
+
+<!-- 花籃畫廊，默認隱藏 -->
+<div id="flower-basket-gallery" style="display: none;">
         <div class="flower-basket-item">
             <a href="image/IMG_3431.JPG" data-lightbox="flower-baskets" data-title="租用蘭花（白）NT$1500/對">
                 <img src="image/IMG_3431.JPG" alt="租用蘭花（白）" width="300" height="300" loading="lazy">
             </a>
-            <p class="price"><strong>租用蘭花（白）NT$1500/對</strong></p>
+            <p class="price"><strong>租用 蘭花（白）NT$1500/對</strong></p>
         </div>
     </div>
 
@@ -368,24 +370,24 @@ document.addEventListener("DOMContentLoaded", () => {
     margin-bottom: 15px;
 }
 
-.btn-order {
+/* 按鈕樣式 */
+.btn {
     display: inline-block;
     padding: 10px 25px;
     font-size: 18px;
     color: #fff;
-    background-color: #0077e6;
+    background-color: #0077e6; /* 更亮的藍色 */
     border: none;
     border-radius: 6px;
     text-decoration: none;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 按鈕陰影 */
     transition: all 0.3s ease;
-    margin-bottom: 15px;
 }
 
-.btn-order:hover {
+.btn:hover {
     background-color: #005bb5;
-    transform: translateY(-3px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px); /* 懸停時輕微上移 */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* 懸停時增強陰影 */
 }
 
 /* 花籃畫廊 */
