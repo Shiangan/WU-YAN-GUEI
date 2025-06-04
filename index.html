@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function fadeInAudio() {
         let volume = 0;
         const interval = setInterval(() => {
-            if (volume < 0.5) {
+            if (volume < 0.3) {
                 volume = Math.min(volume + 0.05, 1);
                 audio.volume = volume;
             } else {
