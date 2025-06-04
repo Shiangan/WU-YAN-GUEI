@@ -870,8 +870,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     <!-- 版權信息 -->
     <div class="footer-info">
-        <p class="footer-text"><strong>承辦禮儀公司 祥安生命有限公司 ｜ 禮儀師：陳柏元</strong></p>
-        <p class="footer-text"><strong>© 2025 吳炎圭先生 訃告 | <span class="highlight">祥安生命有限公司</span> 版權所有</strong></p>
+        <p class="footer-text">
+            <strong>承辦禮儀公司 祥安生命有限公司 ｜ 禮儀師：陳柏元</strong>
+        </p>
+        <p class="footer-text">
+        <strong>© 2025 吳炎圭先生 訃告 | <span class="highlight">祥安生命有限公司</span> 版權所有</strong>
+        </p>
     </div>
 </footer>
 
@@ -907,16 +911,21 @@ document.addEventListener("DOMContentLoaded", () => {
     font-family: 'ChenYu', serif; /* 使用辰魚落雁體 */
     background-color: #f9f9f9;
     border-top: 1px solid #ddd;
-    padding: 15px;
-    margin-top: 20px;
+    padding: 20px 10px;
+    margin-top: 40px;
 }
 
 .footer-text {
+    display: inline-block;
+    font-size: clamp(12px, 2vw. 20px);
+    white-space: nowrap;
+    overflow: hidden;
+    text-align; center;
+    max-width: 100%
+    box-sizing: border-box;
     color: #333;
-    font-size: 14px; /* 默認字體大小 */
     line-height: 1.6;
     margin: 5px 0;
-    white-space: nowrap;
 }
 
 .footer-text strong {
